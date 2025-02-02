@@ -1,4 +1,5 @@
-  // Seleciona os elementos necessários
+export default function formAnimation(){  
+// Seleciona os elementos necessários
   let loginForm = document.getElementById("login");
   let registerForm = document.getElementById("register");
   let loginBtn = document.getElementById("loginBtn");
@@ -30,4 +31,4 @@
   let usernameIpt = document.getElementById("usernameIpt").value;
   let passIpt = document.getElementById("passIpt").value;
 
-          
+}          

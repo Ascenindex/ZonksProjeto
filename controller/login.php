@@ -1,15 +1,16 @@
  <?php
-include '../models/db_connection.php';
+require '../models/db_connection.php';
 
-if (empty($_POST['username']) || empty($_POST['password'])) {
+# if value are empty
+if (empty($_POST['user']) || empty($_POST['password'])) {
     header("Location: ../public/index.php");
     exit();
-}
+} 
 
-$usuario = mysqli_real_escape_string($conn, $_POST['username']);
+$user = mysqli_real_escape_string($conn, $_POST['user']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-$query = "SELECT * FROM usuarios WHERE username = '{$usuario}' AND password = '{$password}'";
+$query = "SELECT * FROM users WHERE user = '{$user}' AND password = '{$password}'";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
@@ -21,9 +22,9 @@ $row = mysqli_fetch_assoc($result);
 if ($row) {
     // Login bem-sucedido
     session_start();
-    $_SESSION['username'] = $row['username'];
+    $_SESSION['user'] = $row['user'];
 
-    if ($row['username'] === $usuario) {
+    if ($row['user'] === $user) {
         // Redirecionar para a página do admin
         header("Location: ../views/pages/dashboard.php");
     } 

@@ -1,3 +1,6 @@
+// Importações
+import { formAnimations } from 'formAnimations.js'; 
+
 // Variáveis globais
 let nav = 0;
 let clicked = null;

@@ -1,71 +1,13 @@
 <?php
 session_start();
-error_reporting(0);
-// Verificar se o usuário está autenticado
-if (!isset($_SESSION["username"])) {
+// error_reporting(0);
+
+if (!isset($_SESSION["user"])) {
     header("Location: ../public/index.php");
     exit();
 }
 
-// Função para estabelecer conexão com o banco de dados
-function getDatabaseConnection()
-{
-    $conn = mysqli_connect("localhost", "root", "", "cadastroteste");
-    if (!$conn) {
-        die("Erro de conexão: " . mysqli_connect_error());
-    }
-    return $conn;
-}
-
-// Função para obter a contagem de clientes por mês no ano atual
-function getClientesPorMes($conn)
-{
-    $sql = "SELECT MONTH(data_cadastro) AS mes, COUNT(*) AS total_clientes
-            FROM clientes
-            WHERE YEAR(data_cadastro) = YEAR(CURDATE())
-            GROUP BY mes
-            ORDER BY mes";
-    $result = mysqli_query($conn, $sql);
-
-    $dadosClientesPorMes = [];
-    $dataCadastro = [];
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        $mes = $row["mes"];
-        $totalClientes = $row["total_clientes"];
-        $dadosClientesPorMes[] = $totalClientes;
-        $dataCadastro[] = date("M", mktime(0, 0, 0, $mes, 1));
-    }
-
-    return [$dadosClientesPorMes, $dataCadastro];
-}
-
-// Função para obter todos os clientes
-function getTodosClientes($conn)
-{
-    $sqlClientes = "SELECT * FROM clientes";
-    $resultClientes = mysqli_query($conn, $sqlClientes);
-
-    $clientes = [];
-    while ($cliente = mysqli_fetch_assoc($resultClientes)) {
-        $clientes[] = $cliente;
-    }
-
-    return $clientes;
-}
-
-// Estabelecer conexão com o banco de dados
-$conn = getDatabaseConnection();
-
-// Obter dados dos clientes por mês e todos os clientes
-list($dadosClientesPorMes, $dataCadastro) = getClientesPorMes($conn);
-$clientes = getTodosClientes($conn);
-
-// Transformar o array de meses em JSON para uso no JavaScript
-$mesesJson = json_encode($dataCadastro);
-
-// Fechar a conexão com o banco de dados
-mysqli_close($conn);
+require_once __DIR__ . '/../../models/db_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -148,7 +90,6 @@ mysqli_close($conn);
             <div class="card">
                 <div>
                     <div class="numbers">
-                        <?php echo array_sum($dadosClientesPorMes); ?>
                     </div>
                     <div class="cardName">Clientes</div>
                 </div>
@@ -174,11 +115,7 @@ mysqli_close($conn);
                             <div class="imgBx"><img src="../../public/imgs/customer02.jpg" alt=""></div>
                         </td>
                         <td>
-                            <h4><?php echo $_SESSION[
-                                "nome"
-                                ]; ?><br><span><?php echo $_SESSION[
-                                "numero"
-                                ]; ?></span></h4>
+                            <h4></span></h4>
                         </td>
                     </tr>
                 </table>

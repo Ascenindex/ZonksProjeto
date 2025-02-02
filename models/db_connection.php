@@ -1,12 +1,13 @@
 <?php
-$servername = "localhost";
-$username_db = "root";
-$password_db = "";
-$database = "cadastroteste";
+define("SERVER", "localhost");
+define("USER", "root");
+define("PASSWORD", "");
+define("DB", "zonksBD");
 
-$conn = new mysqli($servername, $username_db, $password_db, $database);
+$conn = new mysqli(SERVER, USER, PASSWORD, DB);
 
 if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
+
 ?>

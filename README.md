@@ -38,5 +38,3 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'senha');
 define('DB_NAME', 'nome_do_banco');
-
-Sinta-se à vontade para ajustar conforme necessário. Este README fornece uma estrutura básica e informações essenciais sobre o seu projeto CRM.

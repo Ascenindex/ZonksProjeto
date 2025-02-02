@@ -1,36 +1,37 @@
 <?php
 session_start();
 
-include '../models/db_connection.php';
+require '../models/db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $user = isset($_POST['user']) ? $_POST['user'] : null;
+    $password = isset($_POST['password']) ? $_POST['password'] : null;
+    $email = isset($_POST['email']) ? $_POST['email'] : null;
 
-    if (empty($username) || empty($email) || empty($password)) {
+    
+    if (!$user || !$email || !$password) {
         $_SESSION['register_message'] = 'Todos os campos são obrigatórios.';
-        exit;
+        header("Location: ../public/index.php");
+        exit();
     }
+}
+
 
     // Inserir a senha diretamente sem criptografia (NÃO RECOMENDADO)
-    $stmt = $conn->prepare("INSERT INTO usuarios (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $password); // Insere a senha sem criptografia
+    $stmt = $conn->prepare("INSERT INTO users (user, password, email) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $user, $password, $email); // Insere a senha sem criptografia
 
     if ($stmt->execute()) {
-        $_SESSION['username'] = $username;
-        $_SESSION['email'] = $email;
+        $_SESSION['user'] = $user;
         $_SESSION['password'] = $password;
+        $_SESSION['email'] = $email;
         header("Location: ../public/index.php?sucess=1");
         exit();
     } else {
         $_SESSION['register_message'] = 'Erro ao cadastrar usuário.';
         exit();
     }
-} else {
-    header("Location: ../public/index.php");
-    exit();
-}
+
 
 $stmt->close();
 $conn->close();
