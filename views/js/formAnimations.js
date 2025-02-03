@@ -1,4 +1,4 @@
-export default function formAnimation(){  
+
 // Seleciona os elementos necessários
   let loginForm = document.getElementById("login");
   let registerForm = document.getElementById("register");
@@ -7,7 +7,7 @@ export default function formAnimation(){
   let slider = document.getElementById("btn");
 
   // Função para exibir o formulário de registro e ocultar o de login
-  function register() {
+  export function register() {
     loginForm.style.left = "-100%"; // Move o formulário de login para a esquerda
     registerForm.style.left = "5%"; // Move o formulário de registro para a esquerda (exibe)
     slider.style.left = "110px"; // Move o slider para o botão de registro
@@ -18,7 +18,7 @@ export default function formAnimation(){
   }
 
   // Função para exibir o formulário de login e ocultar o de registro
-  function login() {
+  export function login() {
     loginForm.style.left = "5%"; // Move o formulário de login para a direita (exibe)
     registerForm.style.left = "100%"; // Move o formulário de registro para a direita
     slider.style.left = "0"; // Move o slider para o botão de login
@@ -30,5 +30,3 @@ export default function formAnimation(){
 
   let usernameIpt = document.getElementById("usernameIpt").value;
   let passIpt = document.getElementById("passIpt").value;
-
-}          
