@@ -6,8 +6,9 @@
   let registerBtn = document.getElementById("registerBtn");
   let slider = document.getElementById("btn");
 
+    // TODO: export all functions for main.js
   // Função para exibir o formulário de registro e ocultar o de login
-  export function register() {
+  function register() {
     loginForm.style.left = "-100%"; // Move o formulário de login para a esquerda
     registerForm.style.left = "5%"; // Move o formulário de registro para a esquerda (exibe)
     slider.style.left = "110px"; // Move o slider para o botão de registro
@@ -18,9 +19,7 @@
   }
 
   // Função para exibir o formulário de login e ocultar o de registro
-  export function login() {
-    // debug with console.log
-    console.log('debug')
+  function login() {
     loginForm.style.left = "5%"; // Move o formulário de login para a direita (exibe)
     registerForm.style.left = "100%"; // Move o formulário de registro para a direita
     slider.style.left = "0"; // Move o slider para o botão de login
@@ -32,3 +31,6 @@
 
   let usernameIpt = document.getElementById("usernameIpt").value;
   let passIpt = document.getElementById("passIpt").value;
+    function test(test){
+    console.log(test);
+}    

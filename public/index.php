@@ -51,6 +51,8 @@
     </div>
 </div>
 
-<script type="module" src="../views/js/main.js"></script>
+<script src="../views/js/formAnimations.js"></script>
+
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start(); // Inicia a sessão
-
+# FIXME: verify why that shit is here...
 // Verificar se o usuário está autenticado
 if (!isset($_SESSION["username"])) {
     // Usuário não autenticado, redirecionar para a página de login

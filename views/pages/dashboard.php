@@ -18,7 +18,7 @@ require_once __DIR__ . '/../../models/db_connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Admin Dashboard | ZONKS</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css"> <!-- TODO: Fix the css stylesheet-->
 </head>
 <body>
 <div class="container">
@@ -124,6 +124,7 @@ require_once __DIR__ . '/../../models/db_connection.php';
     </div>
 </div>
 
+<!-- TODO: Organize archives js -->
 <script src="../js/main.js"></script>
 <script src="../js/main_v2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
