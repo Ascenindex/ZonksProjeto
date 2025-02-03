@@ -19,6 +19,8 @@
 
   // Função para exibir o formulário de login e ocultar o de registro
   export function login() {
+    // debug with console.log
+    console.log('debug')
     loginForm.style.left = "5%"; // Move o formulário de login para a direita (exibe)
     registerForm.style.left = "100%"; // Move o formulário de registro para a direita
     slider.style.left = "0"; // Move o slider para o botão de login
