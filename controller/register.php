@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         $_SESSION['user'] = $user;
-        $_SESSION['password'] = $password;
+      
         $_SESSION['email'] = $email;
         header("Location: ../public/index.php?sucess=1");
         exit();

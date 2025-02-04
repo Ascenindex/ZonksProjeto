@@ -31,6 +31,7 @@
         <div class="button-box">
             <div id="btn"></div>
             <button type="button" class="toggle-btn" onclick="login()" id="loginBtn">Log In</button>
+
             <button type="button" class="toggle-btn" onclick="register()" id="registerBtn">register</button>
         </div>
         <!-- ============= login-Form ============= -->
@@ -51,8 +52,7 @@
     </div>
 </div>
 
-<script src="../views/js/formAnimations.js"></script>
-
+<script type="module" src="../views/js/main.js"></script>
 
 </body>
 </html>

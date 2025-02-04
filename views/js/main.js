@@ -1,4 +1,10 @@
-// Importações
-import { formAnimations } from 'formAnimations.js'; 
+// Import functions from formAnimations.js
+import { login, register } from "./formAnimations.js";
 
-// TODO: add login and register exporteds
+// Get buttons
+let loginBtn = document.getElementById("loginBtn");
+let registerBtn = document.getElementById("registerBtn");
+
+// Attach event listeners to buttons
+loginBtn.addEventListener("click", login);
+registerBtn.addEventListener("click", register);
