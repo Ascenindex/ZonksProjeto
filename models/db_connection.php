@@ -2,7 +2,7 @@
 define("SERVER", "localhost");
 define("USER", "root");
 define("PASSWORD", "");
-define("DB", "zonksBD");
+define("DB", "zonksbd");
 
 $conn = new mysqli(SERVER, USER, PASSWORD, DB);
 
