@@ -42,6 +42,7 @@
             <br>
             <button type="submit" class="submit-btn">Log In</button>
         </form>
+        <!-- TODO: formate a tela inicial -->
         <!-- =========== Register-form ============ -->
         <form class="input-group" id="register" action="../controller/register.php" method="POST">
             <input type="text" class="input-field" placeholder="username" name="user" required>
