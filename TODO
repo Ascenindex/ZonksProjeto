@@ -12,7 +12,7 @@
 -> criar arquivos com as functions polimorficas [ ] 
 -> nomeclatura das variaveis [  ]
 -> Arrumar arquivos exportar e importar o maximo para melhor entedimento[ ]
-->versionar no git[ x ]
+-> versionar no git[ x ]
 -> MATAR QUEM CRIOU ESSA MERDA [  ]
 -> Corrigir importações e exportações [ x ] -> (falta os calendarios e funções adicionais) [  ]
 -> Fazer um arquivo "mae" do PHP para armazenar as features de cliente, empresa e produto, separadamente [  ]
@@ -21,4 +21,6 @@
 -> Fazer uploads das imagens [  ]
 -> Corrigir os graficos apex.js [  ]
 -> Corrigir os erros de MYSQL [ x ]
+-> Organizando aos poucos o arquivo mae JS -> 30% 
+
 
