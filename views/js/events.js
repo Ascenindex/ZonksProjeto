@@ -110,6 +110,7 @@ export function toggleClick() {
     let main = document.querySelector(".main");
 
     toggle.onclick = function () {
+        console.log("debug", "toggle");
         navigation.classList.toggle("active");
         main.classList.toggle("active");
     };
