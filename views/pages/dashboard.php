@@ -82,8 +82,8 @@ require_once __DIR__ . '/../../models/db_connection.php';
         </div>
         <div class="main">
             <div class="topbar">
-                <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
-                <div class="user" onclick="entrarPerfil()">
+            <div class="toggle" onclick="toggleClick()"><ion-icon name="menu-outline"></ion-icon></div>
+            <div class="user" onclick="entrarPerfil()">
                     <?php echo $_SESSION["imagemHTML"]; ?>
                 </div>
             </div>
@@ -153,32 +153,31 @@ require_once __DIR__ . '/../../models/db_connection.php';
     </div>
 
     <!-- TODO: Organize archives js -->
-    <script src="../js/main.js"></script>
-    <script src="../js/main_v2.js"></script>
+    <script type="module" src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../js/charts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        var dadosGrafico = <?php echo json_encode($dadosClientesPorMes); ?>;
-        var meses = <?php echo $mesesJson; ?>;
+        // var dadosGrafico = <?# php echo json_encode($dadosClientesPorMes); ?>;
+        // var meses = <? #php echo $mesesJson; ?>;
 
-        var options = {
-            chart: {
-                type: 'bar'
-            },
-            series: [{
-                name: 'Clientes',
-                data: dadosGrafico
-            }],
-            xaxis: {
-                categories: meses
-            }
-        };
+        // var options = {
+        //     chart: {
+        //         type: 'bar'
+        //     },
+        //     series: [{
+        //         name: 'Clientes',
+        //         data: dadosGrafico
+        //     }],
+        //     xaxis: {
+        //         categories: meses
+        //     }
+        // };
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
+        // var chart = new ApexCharts(document.querySelector("#chart"), options);
+        // chart.render();
     </script>
 
 </body>

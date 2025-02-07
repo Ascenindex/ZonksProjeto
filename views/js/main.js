@@ -1,10 +1,19 @@
 // Import functions from formAnimations.js
 import { login, register } from "./formAnimations.js";
 
-// Get buttons
-let loginBtn = document.getElementById("loginBtn");
-let registerBtn = document.getElementById("registerBtn");
+// Import event handling functions from events.js
+import { toggleClick } from './events.js';
+  
+document.addEventListener("DOMContentLoaded", function() {
+  // All your event listener code
+  let loginBtn = document.getElementById("loginBtn");
+  let registerBtn = document.getElementById("registerBtn");
 
-// Attach event listeners to buttons
-loginBtn.addEventListener("click", login);
-registerBtn.addEventListener("click", register);
+  if (loginBtn) {
+      loginBtn.addEventListener("click", login);
+  }
+  if (registerBtn) {
+      registerBtn.addEventListener("click", register);
+  }
+  toggleClick();  // Initialize your toggle function
+});

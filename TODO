@@ -1,5 +1,5 @@
 -->( NAO PRECISA FAZER EM ORDEM!! )<--
-
+-> corrigir design do dashboard principal [ x ]
 -> criar ManagerClient para todas funções relacionadas ao cliente[ ]
 -> criar ManagerEnterprise para todas funções relacionadas a empresa[ ]
 -> criar ManagerProducts para todas funções relacionadas a produtos[ ]
@@ -17,8 +17,8 @@
 -> Corrigir importações e exportações [ x ] -> (falta os calendarios e funções adicionais) [  ]
 -> Fazer um arquivo "mae" do PHP para armazenar as features de cliente, empresa e produto, separadamente [  ]
 -> Fazer um arquivo "mae" de CSS para armazenar as folhas de estilos para diminuir o risco de sobreposição [  ]
--> Corrigir BD e seus erros que eu ainda nao identifiquei [  ]
+-> Corrigir BD e seus erros que eu ainda nao identifiquei [ x ]
 -> Fazer uploads das imagens [  ]
 -> Corrigir os graficos apex.js [  ]
--> Corrigir os erros de MYSQL [ ]
+-> Corrigir os erros de MYSQL [ x ]
 
