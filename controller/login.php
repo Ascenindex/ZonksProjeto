@@ -20,7 +20,6 @@ if (!$result) {
 $row = mysqli_fetch_assoc($result);
 
 if ($row) {
-    // Login bem-sucedido
     session_start();
     $_SESSION['user'] = $row['user'];
 

@@ -29,37 +29,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($password)) {
         $sql = "UPDATE usuarios SET password = '$password' WHERE username = '{$_SESSION['username']}'";
         mysqli_query($conn, $sql);
-    }else{
+    } else {
         header('Location: ../../public/index.php');
     }
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
-    $uploadDir = "uploads/"; // Diretório onde as imagens serão armazenadas
+    // Verifica se o formulário foi enviado
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
+        $uploadDir = "uploads/"; // Diretório onde as imagens serão armazenadas
 
-    // Verifica se o diretório de uploads existe, senão cria
-    if (!file_exists($uploadDir)) {
-        mkdir($uploadDir, 0777, true); // Cria o diretório com permissões de escrita
-    }
+        // Verifica se o diretório de uploads existe, senão cria
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0777, true); // Cria o diretório com permissões de escrita
+        }
 
-    $uploadFile = $uploadDir . basename($_FILES["image"]["name"]); // Caminho completo do arquivo
+        $uploadFile = $uploadDir . basename($_FILES["image"]["name"]); // Caminho completo do arquivo
 
-    // Verifica se o arquivo é uma imagem
-    $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
-    $allowedTypes = array("jpg", "jpeg", "png", "gif");
-    if (!in_array($imageFileType, $allowedTypes)) {
-        echo "Apenas arquivos JPG, JPEG, PNG e GIF são permitidos.";
-    } else {
-        // Tenta mover o arquivo para o diretório de uploads
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $uploadFile)) {
-            echo "Arquivo foi carregado com sucesso.<br>";
-
-            // Exibe a imagem carregada
-            echo '<img src="' . $uploadFile . '" alt="Imagem Carregada">';
+        // Verifica se o arquivo é uma imagem
+        $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
+        $allowedTypes = array("jpg", "jpeg", "png", "gif");
+        if (!in_array($imageFileType, $allowedTypes)) {
+            echo "Apenas arquivos JPG, JPEG, PNG e GIF são permitidos.";
         } else {
-            echo "Ocorreu um erro ao carregar o arquivo.";
+            // Tenta mover o arquivo para o diretório de uploads
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $uploadFile)) {
+                echo "Arquivo foi carregado com sucesso.<br>";
+
+                // Exibe a imagem carregada
+                echo '<img src="' . $uploadFile . '" alt="Imagem Carregada">';
+            } else {
+                echo "Ocorreu um erro ao carregar o arquivo.";
+            }
         }
     }
-}
     // Atualizar sessão com novo nome de usuário
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
@@ -71,4 +71,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
 
 // Fechar a conexão com o banco de dados
 mysqli_close($conn);
-?>

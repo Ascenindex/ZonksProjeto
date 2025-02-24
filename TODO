@@ -1,17 +1,17 @@
--->( NAO PRECISA FAZER EM ORDEM!! )<--
+--> ( NAO PRECISA FAZER EM ORDEM!! ) <--
 -> corrigir design do dashboard principal [ x ]
--> criar ManagerClient para todas funções relacionadas ao cliente[ ]
--> criar ManagerEnterprise para todas funções relacionadas a empresa[ ]
--> criar ManagerProducts para todas funções relacionadas a produtos[ ]
--> separar uploads, js, css, etc e compactar todos ao maximo[ ] 
-                    |    |-[ ] 
-                    |- [ ]
+-> criar ManagerClient para todas funções relacionadas ao cliente[  ]
+-> criar ManagerEnterprise para todas funções relacionadas a empresa[  ]
+-> criar ManagerProducts para todas funções relacionadas a produtos[  ]
+-> separar uploads, js, css, etc e compactar todos ao maximo[  ] 
+                    |    |-[  ] 
+                    |- [  ]
 -> resetar BD para user[ x ]
 -> consertar transição de telas pos login para dashboard[ x ]
 -> arrumar BD usando require [ x ]
 -> criar arquivos com as functions polimorficas [ ] 
 -> nomeclatura das variaveis [  ]
--> Arrumar arquivos exportar e importar o maximo para melhor entedimento[ ]
+-> Arrumar arquivos exportar e importar o maximo para melhor entedimento[  ]
 -> versionar no git[ x ]
 -> MATAR QUEM CRIOU ESSA MERDA [  ]
 -> Corrigir importações e exportações [ x ] -> (falta os calendarios e funções adicionais) [  ]
@@ -22,5 +22,4 @@
 -> Corrigir os graficos apex.js [  ]
 -> Corrigir os erros de MYSQL [ x ]
 -> Organizando aos poucos o arquivo mae JS -> 55% 
-
--> MENSAGEM PARA O AMOR [  ]
+-> Estilizar tela de login

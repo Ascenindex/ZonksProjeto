@@ -61,153 +61,154 @@ $mesesJson = json_encode($dataCadastro);
 </head>
 
 <body>
-<!-- =============== Navigation ================ -->
-<div class="container">
-    <div class="navigation">
-    <ul>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
                 <li>
-                <img src="../../public/imgs/zonks-logo-branca.png" alt="LOGO" width="250" height="100" class="logo">
-            </li>
-            <li>
-                <a href="dashboard.php">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="title">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="calendario.php">
-                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-                    <span class="title">Calendário</span>
-                </a>
-            </li>
-            <li>
-                <a href="cadastrar.php">
-                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                    <span class="title">Cadastrar clientes</span>
-                </a>
-            </li>
-            <li>
-                <a href="cadastrarproduto.php">
-                    <span class="icon"><ion-icon name="bag-add-outline"></ion-icon></span>
-                    <span class="title">Cadastrar produtos</span>
-                </a>
-            </li>
-            <li>
-                <a href="cadastrarempresa.php">
-                    <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
-                    <span class="title">Cadastrar empresa</span>
-                </a>
-            </li>
-            <li>
-                <a href="colaboradores.php">
-                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                    <span class="title">Colaboradores</span>
-                </a>
-            </li>
-            <li>
-                <a href="config.php">
-                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                    <span class="title">Configurações</span>
-                </a>
-            </li>
+                    <img src="../../public/imgs/zonks-logo-branca.png" alt="LOGO" width="250" height="100" class="logo">
+                </li>
+                <li>
+                    <a href="dashboard.php">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendario.php">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="title">Calendário</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrar.php">
+                        <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                        <span class="title">Cadastrar clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrarproduto.php">
+                        <span class="icon"><ion-icon name="bag-add-outline"></ion-icon></span>
+                        <span class="title">Cadastrar produtos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrarempresa.php">
+                        <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
+                        <span class="title">Cadastrar empresa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="colaboradores.php">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Colaboradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="config.php">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
 
-            <li>
-                <a href="../../controller/logout.php">
-                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                    <span class="title">Log Out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- ========================= Main ==================== -->
-    <div class="main">
-        <div class="topbar">
-            <div class="toggle">
-                <ion-icon name="menu-outline"></ion-icon>
+                <li>
+                    <a href="../../controller/logout.php">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="user" onclick="entrarPerfil()">
+                    <?php echo $_SESSION['imagemHTML']; ?>
+                </div>
             </div>
-       
-            <div class="user" onclick="entrarPerfil()">
-            <?php echo $_SESSION['imagemHTML']; ?>
+
+            <!-- ================= The Guys ================ -->
+
+            <div class="colaborators">
+                <div class="cardHeader">
+                    <h2>Colaboradores do projeto</h2>
+                </div>
+                <div class="collab-item">
+                    <div class="imgBx"><img src="../../public/imgs/felippi.jpg" alt=""></div>
+                    <div>
+                        <h1>Felippi Ascendino</h1>
+                        <h3>CSS, JavaScript, PHP, MySQL.</h3>
+                    </div>
+                </div>
+                <div class="collab-item">
+                    <div class="imgBx"><img src="../../public/imgs/otario.jpg" alt=""></div>
+                    <div>
+                        <h1>Fabio Souza</h1>
+                        <h3>PHP, MySQL.</h3>
+                    </div>
+                </div>
+                <div class="collab-item">
+                    <div class="imgBx"><img src="../../public/imgs/cris.jpg" alt=""></div>
+                    <div>
+                        <h1>Crislei Rosa</h1>
+                        <h3>CSS, PHP, JavaScript.</h3>
+                    </div>
+                </div>
+                <div class="collab-item">
+                    <div class="imgBx"><img src="../../public/imgs/carlos.jpg" alt=""></div>
+                    <div>
+                        <h1>Carlos e Lopes</h1>
+                        <h3>CSS, JavaScript.</h3>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        </div>
-
-    <!-- ================= The Guys ================ -->
-
-    <div class="colaborators">
-  <div class="cardHeader">
-    <h2>Colaboradores do projeto</h2>
-  </div>
-  <div class="collab-item">
-    <div class="imgBx"><img src="../../public/imgs/felippi.jpg" alt=""></div>
-    <div>
-      <h1>Felippi Ascendino</h1>
-      <h3>CSS, JavaScript, PHP, MySQL.</h3>
     </div>
-  </div>
-  <div class="collab-item">
-    <div class="imgBx"><img src="../../public/imgs/otario.jpg" alt=""></div>
-    <div>
-      <h1>Fabio Souza</h1>
-      <h3>PHP, MySQL.</h3>
-    </div>
-  </div>
-  <div class="collab-item">
-    <div class="imgBx"><img src="../../public/imgs/cris.jpg" alt=""></div>
-    <div>
-      <h1>Crislei Rosa</h1>
-      <h3>CSS, PHP, JavaScript.</h3>
-    </div>
-  </div>
-  <div class="collab-item">
-    <div class="imgBx"><img src="../../public/imgs/carlos.jpg" alt=""></div>
-    <div>
-      <h1>Carlos e Lopes</h1>
-      <h3>CSS, JavaScript.</h3>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-</div>
 
 
 
-<!-- =========== Scripts =========  -->
-<script src="../js/main.js"></script>
-<script src="../js/main_v2.js"></script>
+    <!-- =========== Scripts =========  -->
+    <script src="../js/main.js"></script>
+    <script src="../js/main_v2.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="../js/charts.js"></script>
-<!-- ====== ionicons ======= -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../js/charts.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<script>
-    // Dados do gráfico
-    var dadosGrafico = <?php echo json_encode($dadosClientesPorMes); ?>;
-    var meses = <?php echo $mesesJson; ?>;
+    <script>
+        // Dados do gráfico
+        var dadosGrafico = <?php echo json_encode($dadosClientesPorMes); ?>;
+        var meses = <?php echo $mesesJson; ?>;
 
-    // Configuração do gráfico ApexCharts
-    var options = {
-        chart: {
-            type: 'bar'
-        },
-        series: [{
-            name: 'Clientes',
-            data: dadosGrafico
-        }],
-        xaxis: {
-            categories: meses
-        }
-    };
+        // Configuração do gráfico ApexCharts
+        var options = {
+            chart: {
+                type: 'bar'
+            },
+            series: [{
+                name: 'Clientes',
+                data: dadosGrafico
+            }],
+            xaxis: {
+                categories: meses
+            }
+        };
 
-    // Renderiza o gráfico ApexCharts
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>
+        // Renderiza o gráfico ApexCharts
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
 
 </body>
+
 </html>
 <?php
 // Fechar a conexão com o banco de dados após utilização

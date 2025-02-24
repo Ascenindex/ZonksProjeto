@@ -3,7 +3,7 @@ include'../models/db_connection.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
     $sql = "DELETE FROM clientes WHERE id=$id";
-
+    
     $maxRetries = 5;
     $retries = 0;
     $success = false;

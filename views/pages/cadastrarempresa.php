@@ -114,10 +114,12 @@ if (!$result) {
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: #f9f9f9;
-            transition: opacity 0.5s ease, transform 0.5s ease; /* Adicionando uma transição suave para opacidade e transform */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            /* Adicionando uma transição suave para opacidade e transform */
             border-radius: 10px;
             box-shadow: 3px 9px 24px 0px rgba(0, 0, 0, 0.35);
-            display: none; /* Inicialmente oculto */
+            display: none;
+            /* Inicialmente oculto */
             flex-direction: column;
             align-items: center;
         }
@@ -126,7 +128,8 @@ if (!$result) {
         .add-box.show {
             display: flex;
             opacity: 1;
-            transform: translate(-50%, -50%) scale(1); /* Adicionando escala para um efeito de zoom */
+            transform: translate(-50%, -50%) scale(1);
+            /* Adicionando escala para um efeito de zoom */
         }
 
         .add-box h1 {
@@ -269,58 +272,58 @@ if (!$result) {
     <div class="container">
         <div class="navigation">
             <ul>
-                       <li>
-                <img src="../../public/imgs/zonks-logo-branca.png" alt="LOGO" width="250" height="100" class="logo">
-            </li>
-            <li>
-                <a href="dashboard.php">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="title">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="calendario.php">
-                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-                    <span class="title">Calendário</span>
-                </a>
-            </li>
-            <li>
-                <a href="cadastrar.php">
-                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                    <span class="title">Cadastrar clientes</span>
-                </a>
-            </li>
-<li>
-                <a href="cadastrarproduto.php">
-                    <span class="icon"><ion-icon name="bag-add-outline"></ion-icon></span>
-                    <span class="title">Cadastrar produtos</span>
-                </a>
-            </li>
-            <li>
-                <a href="cadastrarempresa.php">
-                    <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
-                    <span class="title">Cadastrar empresa</span>
-                </a>
-            </li>
-            <li>
-                <a href="colaboradores.php">
-                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                    <span class="title">Colaboradores</span>
-                </a>
-            </li>
-            <li>
-                <a href="config.php">
-                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                    <span class="title">Configurações</span>
-                </a>
-            </li>
+                <li>
+                    <img src="../../public/imgs/zonks-logo-branca.png" alt="LOGO" width="250" height="100" class="logo">
+                </li>
+                <li>
+                    <a href="dashboard.php">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendario.php">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="title">Calendário</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrar.php">
+                        <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                        <span class="title">Cadastrar clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrarproduto.php">
+                        <span class="icon"><ion-icon name="bag-add-outline"></ion-icon></span>
+                        <span class="title">Cadastrar produtos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastrarempresa.php">
+                        <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
+                        <span class="title">Cadastrar empresa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="colaboradores.php">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Colaboradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="config.php">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
 
-            <li>
-            <a href="../../controller/logout.php">
-                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                    <span class="title">Log Out</span>
-                </a>
-            </li>
+                <li>
+                    <a href="../../controller/logout.php">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Log Out</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -346,26 +349,26 @@ if (!$result) {
                     <ion-icon name="add-circle-outline" onclick="showEmpresa()" id="showFormIcon" style="width:70px;height:40px; cursor:pointer;"></ion-icon>
                 </div>
                 <table id="table_client">
-                <thead>
+                    <thead>
                         <tr>
                             <th>Empresa</th>
                             <th>Açao</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars($row['empresa']) . "</td>";
-                        echo "<td>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($row['empresa']) . "</td>";
+                            echo "<td>
                                 <form style='display:inline;' method='POST' action='../../controller/deletarEmpresa.php' onsubmit='return confirmDelete()'>
                                     <input type='hidden' name='id' value='" . $row["id"] . "'>
                                     <button class='delete-button' type='submit'><ion-icon name='trash-outline'></ion-icon></button>
                                 </form>
                             </td>";
-                        echo "</tr>";
-                    }
-                    ?>
+                            echo "</tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -385,7 +388,7 @@ if (!$result) {
 
 
     <script>
-        
+
     </script>
 
     <!-- =========== Scripts =========  -->
@@ -399,21 +402,21 @@ if (!$result) {
 </body>
 <style>
     /* CSS para fade */
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-}
+    .fade-in {
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+    }
 
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-    display: none;
-}
+    .fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        display: none;
+    }
 
-.hidden {
-    opacity: 0;
-    display: none;
-}
-
+    .hidden {
+        opacity: 0;
+        display: none;
+    }
 </style>
+
 </html>

@@ -1,50 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-
 }
-/*!Ebaaaaa*/
-.alert-box{
+
+html,
+body {
+  overflow: hidden;
   width: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-.alerta{
-  position: absolute;
-  top: 5px;
-  width: 500px;
-  height: 50px;
-  border: 1px solid #ff6b6b;
-  background-color: rgba(255, 107, 107, 0.71);
+  height: 100vh;
 }
 
 
-.hero{
+.hero {
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
-.form-box{
-  width: 380px;
+.form-box {
+  width: 400px;
   height: 480px;
   position: relative;
-  margin: 6% auto;  
+  margin: 6% auto;
   background-color: #191313;
   padding: 5px;
   color: #fff;
   overflow: hidden;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
--moz-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.32);
 }
 
-.button-box{
+.button-box {
   width: 220px;
   margin: 35px auto;
   position: relative;
@@ -52,18 +43,17 @@ box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
   border-radius: 30px;
 }
 
-.toggle-btn{
+.toggle-btn {
   padding: 10px 30px;
   cursor: pointer;
   background: transparent;
   border: 0;
   outline: none;
   position: relative;
-  
 }
 
-#btn{
-  top: 0;  
+#btn {
+  top: 0;
   left: 0;
   position: absolute;
   width: 220px;
@@ -73,7 +63,7 @@ box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
   transition: .5s;
 }
 
-#registerBtn{
+#registerBtn {
   font-weight: 600;
   font-size: 18px;
   left: 110px;
@@ -88,22 +78,20 @@ box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
   font-style: italic;
 }
 
-#loginBtn{
+#loginBtn {
   transition: .5s;
   font-weight: 700;
   font-size: 18px;
 }
 
-
-
-.input-group{
+.input-group {
   top: 180px;
   position: absolute;
   width: 280px;
   transition: .5s;
 }
 
-.input-field{
+.input-field {
   width: calc(100% + 32%);
   padding: 10px 0;
   margin: 5px 0;
@@ -117,21 +105,21 @@ box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
 }
 
 .input-field::placeholder {
-  color: #999; /* Cor inicial do placeholder */
-  transition: transform 0.3s ease-in, color 0.3s ease-in; /* Transição para a transformação e cor */
+  color: #999;
+  transition: transform 0.3s ease-in, color 0.3s ease-in;
   position: absolute;
-  top: 50%; /* Posicionar o placeholder no meio do campo */
+  top: 50%;
   left: 0;
-  transform: translateY(-50%); /* Ajustar para centralizar verticalmente */
-  pointer-events: none; /* Evitar que o placeholder seja clicável */
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .input-field:focus::placeholder,
 .input-field:not(:placeholder-shown)::placeholder {
-  transform: translateY(-100%); /* Mover o placeholder para cima */
+  transform: translateY(-100%);
 }
 
-.submit-btn{
+.submit-btn {
   width: 85%;
   padding: 10px 30px;
   cursor: pointer;
@@ -151,23 +139,24 @@ box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.32);
   transition: 0.3s;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
   transition: 0.3s;
   background-color: #5557a4;
   opacity: 1;
 }
 
-.check-box{
+.check-box {
   margin: 30px 10px 30px 0;
 }
 
-span{
+span {
   color: #777;
   font-size: 12px;
   bottom: 68px;
   position: absolute;
 }
-a{
+
+a {
   font-size: 12px;
   position: relative;
   display: flex;
@@ -177,7 +166,7 @@ a{
   font-style: italic;
 }
 
-.register-link{
+.register-link {
   width: 80px;
   position: absolute;
   left: 95%;
@@ -186,12 +175,12 @@ a{
   font-style: italic;
 }
 
-#login{
-    position: absolute;
-    left: 5%;
+#login {
+  position: absolute;
+  left: 5%;
 }
-#register{
+
+#register {
   position: absolute;
   left: 100%;
-
 }

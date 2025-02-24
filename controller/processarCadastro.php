@@ -44,7 +44,7 @@ if (mysqli_stmt_num_rows($stmt) > 0) {
             $_SESSION['numero'] = $numero;
             $_SESSION['empresa'] = $empresa;
             $_SESSION['produto'] = $produto;
-            
+
             echo "<script>alert('Cadastro realizado com sucesso!');</script>";
             header("Location: ../views/pages/cadastrar.php");
             exit();
@@ -62,4 +62,3 @@ if (mysqli_stmt_num_rows($stmt) > 0) {
 
 // Fechar a conexão com o banco de dados após utilização
 mysqli_close($conn);
-?>

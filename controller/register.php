@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = isset($_POST['user']) ? $_POST['user'] : null;
     $password = isset($_POST['password']) ? $_POST['password'] : null;
     $email = isset($_POST['email']) ? $_POST['email'] : null;
-
     
     if (!$user || !$email || !$password) {
         $_SESSION['register_message'] = 'Todos os campos são obrigatórios.';
